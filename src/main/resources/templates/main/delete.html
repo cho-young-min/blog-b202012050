@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>회원 삭제 확인</title>
+</head>
+<body>
+<h1>회원 삭제 확인</h1>
+<p>정말로 회원을 삭제하시겠습니까?</p>
+<form th:action="@{'/members/' + ${dto.idx} + '/delete'}" method="post">
+    <button type="submit">삭제</button>
+    <a th:href="@{'/members/' + ${dto.idx}}">취소</a>
+</form>
+</body>
+</html>
+

@@ -200,7 +200,7 @@
                         <a class="dropdown-item" th:href="@{'/members/' + ${session.idx}}">
                             <i class="dw dw-user1"></i> Profile</a
                         >
-                        <a class="dropdown-item" href="profile.html"
+                        <a class="dropdown-item" th:href="@{'/members/' + ${session.idx}}"
                         ><i class="dw dw-settings2"></i> Setting</a
                         >
                         <a class="dropdown-item" href="faq.html"
@@ -208,6 +208,9 @@
                         >
                         <a class="dropdown-item" href="/members/logout"
                         ><i class="dw dw-logout"></i> Log Out</a
+                        >
+                        <a class="dropdown-item" href="/members/delete"
+                        ><i class="dw dw-delete"></i> delete</a
                         >
                     </div>
                 </div>
@@ -395,12 +398,13 @@
     <div class="left-side-bar">
         <div class="brand-logo">
             <a href="../">
-                <img src="../vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
-                <img
+                <img src="../vendors/images/be-logo.png" alt=""  width="55" height="40"/>
+               <!-- <span class="logo-text">블로그 이름</span>-->
+              <!--  <img
                         src="../vendors/images/deskapp-logo-white.svg"
                         alt=""
                         class="light-logo"
-                />
+                />-->
             </a>
             <div class="close-sidebar" data-toggle="left-sidebar-close">
                 <i class="ion-close-round"></i>
