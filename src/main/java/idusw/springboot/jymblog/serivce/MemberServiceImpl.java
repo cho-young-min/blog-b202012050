@@ -49,8 +49,11 @@ public class MemberServiceImpl implements MemberService {
         if (memberEntityOptional.isPresent()) {
             MemberEntity existingEntity = memberEntityOptional.get();
             // 기존 엔티티에서 새로운 정보를 업데이트합니다.
+            existingEntity.setId(memberDto.getId());
+            existingEntity.setPw(memberDto.getPw());
             existingEntity.setName(memberDto.getName());
             existingEntity.setEmail(memberDto.getEmail());
+
 
             // 엔티티를 저장하여 업데이트를 반영합니다.
             memberRepository.save(existingEntity);

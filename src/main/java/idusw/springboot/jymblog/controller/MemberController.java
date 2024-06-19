@@ -123,7 +123,9 @@ public class MemberController {
         // 수정된 정보를 새로운 DTO에 설정합니다.
         MemberDto updatedDto = MemberDto.builder()
                 .idx(idx) // 해당 사용자의 고유 식별자
-                .name(memberDto.getName()) // 새로운 아이디
+                .id(memberDto.getId())
+                .pw(memberDto.getPw())
+                .name(memberDto.getName()) // 새로운 이름
                 .email(memberDto.getEmail())
                 .build();
         // 회원 정보를 업데이트합니다.
