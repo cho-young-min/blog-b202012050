@@ -54,7 +54,7 @@ public class MemberServiceTest {
     @Test
     public void registerOne() {
         MemberDto dto = MemberDto.builder()
-                    .id("admin2")
+                    .id("admin")
                     .pw("cometrue")
                     .name("administrator")
                     .email("admin" + "@induk.ac.kr")
